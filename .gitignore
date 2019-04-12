@@ -1,6 +1,3 @@
-# Python compiled
-*.pyc
-
 # IntelliJ
 .idea
 .vscode
@@ -15,3 +12,6 @@
 # Rust
 target
 build
+
+# Webassembly generated files
+*.wasm
