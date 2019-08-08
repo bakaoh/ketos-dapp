@@ -4,11 +4,6 @@ version = "0.1.0"
 publish = false
 edition = "2018"
 
-[[bin]]
-name = "ketos_demo"
-path = "src/main.rs"
-doc = false
-
 [lib]
 name = "ketos_dapp"
 path = "src/lib.rs"
