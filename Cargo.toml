@@ -1,11 +1,16 @@
 [package]
-name = "template_app"
+name = "ketos_dapp"
 version = "0.1.0"
 publish = false
 edition = "2018"
 
+[[bin]]
+name = "ketos_demo"
+path = "src/main.rs"
+doc = false
+
 [lib]
-name = "template_app"
+name = "ketos_dapp"
 path = "src/lib.rs"
 crate-type = ["cdylib"]
 
@@ -18,3 +23,4 @@ panic = "abort"
 [dependencies]
 log = "0.4"
 fluence = { version = "0.1.5", features = ["wasm_logger"] }
+ketos = { path = "../ketos" }
