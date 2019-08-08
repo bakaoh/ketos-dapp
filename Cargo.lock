@@ -83,6 +83,7 @@ dependencies = [
 [[package]]
 name = "ketos"
 version = "0.11.1"
+source = "git+https://github.com/bakaoh/ketos?branch=wasm#209d031578e0f34add6890e3426388876e49fce0"
 dependencies = [
  "byteorder 0.5.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "gumdrop 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -95,7 +96,7 @@ name = "ketos_dapp"
 version = "0.1.0"
 dependencies = [
  "fluence 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)",
- "ketos 0.11.1",
+ "ketos 0.11.1 (git+https://github.com/bakaoh/ketos?branch=wasm)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -278,6 +279,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 "checksum fuchsia-cprng 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "a06f77d526c1a601b7c4cdd98f54b5eaabffc14d5f2f0296febdc7f357c6d3ba"
 "checksum gumdrop 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)" = "395c7c79599167d04e7349ee60cc6cb14a28dfebaf922b4dc41603a7b18c3b28"
 "checksum gumdrop_derive 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)" = "04c43663fd6604d9065f5cd26ae7a0301491fd941ad29b0a01665a6be3a1ddbd"
+"checksum ketos 0.11.1 (git+https://github.com/bakaoh/ketos?branch=wasm)" = "<none>"
 "checksum libc 0.2.60 (registry+https://github.com/rust-lang/crates.io-index)" = "d44e80633f007889c7eff624b709ab43c92d708caad982295768a7b13ca3b5eb"
 "checksum log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)" = "c84ec4b527950aa83a329754b01dbe3f58361d1c5efacd1f6d68c494d08a17c6"
 "checksum num 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)" = "cf4825417e1e1406b3782a8ce92f4d53f26ec055e3622e1881ca8e9f5f9e08db"

@@ -23,4 +23,4 @@ panic = "abort"
 [dependencies]
 log = "0.4"
 fluence = { version = "0.1.5", features = ["wasm_logger"] }
-ketos = { path = "../ketos" }
+ketos = { git = "https://github.com/bakaoh/ketos", branch = "wasm" }
