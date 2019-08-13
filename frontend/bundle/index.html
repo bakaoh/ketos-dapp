@@ -9,9 +9,22 @@
         <section class="container">
             <h1>Fluence Ketos</h1>
             <div class="box">
+                <label for="session">Enter your session: </label>
+                <input type="text" id="session" />
+                <br/>
+            </div>
+
+            <br/>
+            <div class="box">
                 <label for="code">Enter your script: </label>
                 <br/>
-                <textarea rows="8" style="width: 99%;" id="code"></textarea>
+                <textarea rows="8" style="width: 99%;" id="code">
+(define (fibonacci n)
+(if (<= n 2)
+    1
+    (+ (fibonacci (- n 1)) (fibonacci (- n 2)))))
+(fibonacci 10)
+                </textarea>
                 <br/>
                 <button id="run" disabled>Run!</button>
             </div>

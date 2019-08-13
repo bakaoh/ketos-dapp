@@ -3,6 +3,7 @@ import * as fluence from "fluence";
 window.onload = function () {
 	const runBtn = document.querySelector('#run');
 	const codeInput = document.querySelector('#code');
+	const sessionInput = document.querySelector('#session');
 	const resultLbl = document.querySelector('#result');
 
 	// address to Fluence contract in Ethereum blockchain. 
@@ -13,7 +14,7 @@ window.onload = function () {
 	let ethUrl = "http://rinkeby.fluence.one:8545/"
 
 	// application to interact with that stored in Fluence contract
-	let appId = "344";
+	let appId = "381";
 
 	// save fluence to global variable, so it can be accessed from Developer Console
 	window.fluence = fluence;
@@ -42,8 +43,12 @@ window.onload = function () {
 	
 	// send username as a transaction and display results in grettingLbl
 	function send() {
-		const code = codeInput.value.trim();
-		let result = session.request(code);
+		const req = JSON.stringify({
+			action: "Run",
+			code: codeInput.value.trim(),
+			session: sessionInput.value.trim(),
+		})
+		let result = session.request(req);
 		getResultString(result).then(function (str) {
 			resultLbl.value = str;
 		});

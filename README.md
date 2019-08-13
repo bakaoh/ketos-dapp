@@ -2,7 +2,7 @@
 
 A [Fluence](https://fluence.network/) application that allows uploading and executing [Ketos](https://github.com/murarth/ketos) scripts
 
-[Live App](http://ipfs.fluence.one:8080/ipfs/QmWepMjfxeNJn4R5yRt4dMF4TJZZKdtyxsRvfrMmHy1Zz2/index.html)
+[Live App](http://ipfs.fluence.one:8080/ipfs/QmUx2tUYj3nvxLXsLvk156CASmVXLKUUkc82kcYyMnuNrs/index.html)
 
 ![Screenshot](Screenshot.png)
 
