@@ -10,15 +10,21 @@ fn init() {
 #[invocation_handler(init_fn = init)]
 fn main(arg: String) -> String {
     let interp = Interpreter::new();
-    let code = interp.compile_exprs(arg.as_str()).unwrap();
+    let compile_rs = interp.compile_exprs(arg.as_str());
     let mut rs = String::new();
 
-    for c in code {
-        match interp.execute(c) {
-            Ok(v) => rs.push_str(interp.format_value(&v).as_str()),
-            Err(e) => rs.push_str(interp.format_error(&e).as_str()),
-        }
-        rs.push('\n');
+    match compile_rs {
+        Ok(code) => {
+            for c in code {
+                match interp.execute(c) {
+                    Ok(v) => rs.push_str(interp.format_value(&v).as_str()),
+                    Err(e) => rs.push_str(interp.format_error(&e).as_str()),
+                }
+                rs.push('\n');
+            }
+        },
+        Err(e) => rs.push_str(interp.format_error(&e).as_str()),
     }
+    
     return rs;
 }
